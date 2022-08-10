@@ -1,0 +1,421 @@
+
+/* MENU :
+	* 1.BODY
+	* 2.COMPOSANT Header...
+	* 3.COMPOSANT Alt
+	* 4.COMPOSANT Basket
+	* 5.COMPOSANTS AltInBasket et AltFmUser
+	* 6.COMPOSANT Notes
+	* 7.COMPOSANT Footer
+	* 8.Media Queries
+*/
+
+/* 1.BODY*/
+body{
+	background-color: #f7f7f7;
+}
+
+a{
+	text-decoration:none;
+}
+
+/* 2.COMPOSANTS Header...*/
+header{
+	margin-bottom:20px;
+	background-color: #f9df2d;
+}
+
+#topHeader{
+	background-color: #534d4d;
+	color:white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 2rem;
+}
+
+#topHeader h4{
+	color:#f9df2d;
+}
+
+#box-logo{
+	margin-bottom: 10px;
+}
+
+#box-logo img{
+	max-width: 100px;
+	transition-duration: 1s;
+}
+
+#box-logo img:hover{
+	-ms-transform: scale(1.2); /* IE 9 */
+	transform:scale(1.2);
+}
+
+#infos{
+	padding-right: 10px;
+	padding-left: 10px;	
+	margin-bottom: 40px;
+}
+
+.info-using{
+	text-align: center;
+}
+
+.info-box{
+	border:1px solid gainsboro;
+	border-radius: 0 0 30px 30px;
+	height: 100%;
+	background-color: white;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+.info-title{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: grey;
+	margin-bottom: 10px;
+	color: white;	
+}
+
+.info-using img{
+	width: 154px;
+	margin: 20px auto;
+	transition-duration: 1s;	
+}
+
+.info-using img:hover{
+  	-ms-transform: rotate(45deg); /* IE 9 */
+  	transform: rotate(45deg); /* Standard syntax */
+}
+
+.info-desc{
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.sticky{
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.menuHeader {
+	display: flex;
+	justify-content: space-between;
+	align-content: space-around;
+	align-items: center; 	
+  	list-style-type: none;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #534d4d; 
+}
+
+#search-alt{
+  	color: white;  
+  	padding-left:10px;
+}
+
+.menuHeader li a {
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+}
+
+.menuHeader li a:hover {
+  	background-color: #111;
+}
+
+li#totheright a{
+	background-color: #14e04d;
+	transition-duration: 1s;
+}
+
+li#totheright a:hover{
+	background-color: #f8de2e; 
+}
+
+#n-alts-basket{
+	font-size: 12px;
+}
+
+input[type="submit"] { /*boutons : rechercher alt et calculer rapide*/
+	background-color: #f92d5e;
+}
+
+input[type="submit"]:hover { /*boutons : rechercher alt et calculer rapide*/
+	background-color: #ff5f85;
+}
+
+/* 3.COMPOSANT Alt*/
+.cardperso{
+	border:1px solid black;
+}
+
+.cardperso img{
+	width: 20%;
+}
+
+.row-alts{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.card-alt{
+	padding-right: 0;
+	padding-left: 0;
+	border:1px solid darkgray;
+}
+
+.frame-img{
+	display: flex;
+	justify-content: center;
+	background-color: #a8d4fe; 
+}
+
+.frame-img img{
+	max-height: 150px;
+	border: 3px solid gainsboro;
+	transition-duration: 1s;
+}
+
+.frame-img img:hover {
+	transform:scale(1.2);
+	-ms-transform: scale(1.2); /* IE 9 */		
+	box-shadow: 0px 0px 10px #8d8282;
+}
+
+.alt-body{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.card-alt .card-title{
+	font-weight: bold;
+}
+
+.add_alt{
+	transition-duration: 1s;
+	float: right;
+}
+
+.add_alt:hover{
+	color: white;
+}
+
+/* 4.COMPOSANT Basket*/
+ /* The Modal (background) cf https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal {
+  	display: block; 
+  	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+  	top: 0;
+  	width: 100%; /* Full width */
+  	height: 100%; /* Full height */
+  	overflow: auto; /* Enable scroll if needed */
+  	background-color: rgb(0,0,0); /* Fallback color */
+  	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content Box */
+.modal-content {
+  	background-color: #534d4d;
+  	margin: 15% auto; /* 15% from the top and centered */
+  	padding: 20px;
+  	border: 1px solid #888;
+  	width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#basket-title{
+	margin-bottom: 20px;
+    background: #f9df2d;
+    padding: 10px;
+    border-radius: 20px;
+    border: 4px solid white;
+}
+
+#label-ratio{
+	color: white;
+}
+
+.basket-container-input label{
+	padding-top: 10px;
+}
+
+/* The Close Button */
+#close {
+	color: #aaa;
+	float: right;
+ 	font-size: 28px;
+  	font-weight: bold;
+  	background: antiquewhite;
+	border: 4px solid white;
+	border-radius: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+
+#close:hover,
+#close:focus {
+	color: black;
+  	text-decoration: none;
+  	cursor: pointer;
+} 
+
+/* 5.COMPOSANTS AltInBasket et AltFmUser*/
+.alt-in-basket{
+	background-color: white;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;	
+	border: 1px solid darkgray;
+	margin-bottom: 0.5rem;
+	border-radius: .25rem;
+	font-size: 1.1rem;
+}
+
+.basket-container-img{
+	position: relative;
+	width: 6rem;
+	min-width: 6rem;
+	height: 6rem;	
+	margin-right: 1rem;
+}
+
+.alt-in-basket img{ 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 1.25;	
+	box-shadow: 2px 5px 18px #888;
+}
+
+.alt-in-basket label{
+	padding-bottom: 5px;
+}
+
+#empt-add-alt-user{
+	float: right;
+}
+
+#add-alt-user{
+	background-color: #14e04d;	
+}
+
+#add-alt-user:hover{
+	background-color: #21fe5f;
+}
+
+.alt-user{
+	padding-left: 10px;
+}
+
+.basket-container-input-user{
+	padding-top:1rem;
+}
+
+.basket-container-input input{
+	margin-left:5px;
+}
+
+.basket-rm-alt{
+	position: absolute;
+	right: 2rem;
+	background-color: orange;
+}
+
+#modal-calcul{
+	display: flex;
+	justify-content: center;
+	background:#4caf50;
+	padding: .5rem 1.5rem;
+}
+
+#modal-calcul button{
+	color: #0970e6;
+	background-color: #fff;
+	font-weight: 700;
+}
+
+#results-calcul{
+	background: white;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+#results-calcul h4 span{
+	text-decoration: underline;
+}
+
+#results-calcul h4 strong{
+	background: #f9df2d;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+}
+
+/* 6.COMPOSANT Notes*/
+#notes{
+	background: floralwhite;
+	padding: 10px;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+}
+
+/* 7.COMPOSANT Footer*/
+footer div{
+	text-align:center;
+	background: #534d4d;
+	padding: 10px;
+	color: #f9df2d;
+}
+
+/* 8.Media Queries*/
+@media all and (max-width: 992px){
+	/*COMPOSANT Info*/
+	.info-using{
+		margin-bottom: 20px;
+	}
+}
+
+@media all and (max-width: 577px){
+	/*Panier*/
+	#empt-add-alt-user{
+		float: left;
+	}
+}
+
+@media all and (max-width: 500px){
+	/*Panier*/
+	.alt-in-basket{
+		flex-direction: column;
+		padding-left: 10px;
+	}
+	.basket-rm-alt{
+		position: relative;
+		right:0;
+		margin-bottom: 10px;
+	}
+}
+
+@media all and (max-width: 426px){
+	/*Panier*/
+	#empt-add-alt-user{
+		float: none;
+		margin-bottom: 10px;
+	}
+	#empt-alt-user{
+		margin-bottom: 10px;
+	}
+}
