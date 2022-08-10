@@ -1,11 +1,11 @@
-# Calcul Glucides Insuline - Application Web (en local)
+# Calcul Glucides Insuline - Application Web
 ![Logo](./img/logo.png  "Calcul Glucides Insuline")
 
 ## C'est quoi ?
 Calcul Glucides Insuline (CGI pour les pressés) est la version application web de l'application Android du même nom ; un programme développé pour aider les diabétiques de type 1 à calculer leur dose d'insuline rapide. Plus d'infos [ici](https://github.com/Exnov/Calcul-Glucides-Insuline-App-Android/blob/main/README.md).
 
 ## Pour qui ?
-Avec cette version, même les adorateurs de la pomme peuvent faire des calculs de rapide, ou juste connaître le pourcentage de glucides d'un aliment. Suffit de passer par son navigateur préféré ; une fois l'application téléchargée sur sa machine bien sûr. 
+Avec cette version, même les adorateurs de la pomme peuvent faire des calculs de rapide, ou juste connaître le pourcentage de glucides d'un aliment. Suffit de passer par son navigateur préféré en cliquant sur le fichier index.html ; une fois l'application téléchargée sur sa machine bien sûr. 
 
 ## Mais encore...
 L'autre intérêt concerne les utilisateurs qui bidouillent un peu de code. Les développeurs pourront personnaliser l'application comme bon leur semble, sans taper dans du Java (ou du Kotlin pour ceux qui sont dans le coup). Ici on fait avec React et ça se passe très bien.
